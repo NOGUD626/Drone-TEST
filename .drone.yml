@@ -4,6 +4,6 @@ pipeline:
     # ステップ毎にイメージを指定する必要あり
     image: alpine:3.6
     # Dockerコンテナ起動時のエントリポイントとして以下のコマンドは実行される。
-    # 各コマンドをかくw
+    # 各コマンドをかく
     commands:
       - echo "Hello World"
