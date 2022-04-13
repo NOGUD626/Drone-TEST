@@ -1,9 +1,9 @@
 name: drone-test1
 kind: pipeline
 type: docker
-
 steps:
-- name: test
-  image: alpine
-  commands:
-  - echo "It wworked!"
+  - name: build
+    image: ubuntu:18.04
+    privileged: true
+    commands:
+      - apt update
