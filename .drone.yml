@@ -21,9 +21,16 @@ steps:
       - apt upgrade -y
       - pwd
       - ls -al
+
   - name: notify
     image: plugins/slack
     settings:
       webhook: https://hooks.slack.com/services/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
+    template: >
+        {{#success build.status}}
+          Deploy Blog of build-{{build.number}} succeeded. Good job. <@huluohu> <@iam>
+        {{else}}
+          Deploy Blog of build-{{build.number}} failed. Fix me please. <@huluohu> <@iam>
+        {{/success}}
     when:
       status: [ success, failure ]
