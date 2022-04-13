@@ -7,3 +7,4 @@ steps:
     privileged: true
     commands:
       - apt update -y
+      - apt upgrade -y
