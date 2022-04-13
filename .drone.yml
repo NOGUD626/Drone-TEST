@@ -25,7 +25,7 @@ steps:
   - name: notify-stack
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/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
+      webhook: https://hooks.slack.com/services/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
       channel: 9_times_ob_noguchi
       template: >
         {{#success build.status}}
