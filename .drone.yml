@@ -6,5 +6,4 @@ steps:
     image: ubuntu:18.04
     privileged: true
     commands:
-      - apt update -y
-      - apt upgrade -y
+      - apt update
