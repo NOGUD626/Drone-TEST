@@ -7,4 +7,5 @@ steps:
     privileged: true
     commands:
       - apt update -y
-      - apt upgrade -y
+      - touch memo.md
+      - cat "hello world" >> ./memo.md
