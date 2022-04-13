@@ -14,10 +14,16 @@ steps:
       - echo "hello world" >> ./memo.md
 
   - name: build_part2
-    image: ubuntu:18.04
+    image: ubuntu:20.04
     privileged: true
     commands:
       - apt update -y
       - apt upgrade -y
       - pwd
       - ls -al
+  - name: notify
+    image: plugins/slack
+    settings:
+      webhook: https://hooks.slack.com/services/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
+    when:
+      status: [ success, failure ]
