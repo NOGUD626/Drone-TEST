@@ -12,3 +12,12 @@ steps:
       - pwd
       - ls -al
       - echo "hello world" >> ./memo.md
+
+  - name: build_part2
+    image: ubuntu:18.04
+    privileged: true
+    commands:
+      - apt update -y
+      - apt upgrade -y
+      - pwd
+      - ls -al
