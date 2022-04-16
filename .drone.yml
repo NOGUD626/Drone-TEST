@@ -12,7 +12,7 @@ steps:
       - pwd
       - ls -al
       - echo "hello world" >> ./memo.md
-
+# 
   - name: build_part2
     image: ubuntu:20.04
     privileged: true
